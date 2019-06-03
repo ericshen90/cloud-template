@@ -22,6 +22,8 @@
   <modules>
     <module>template-eureka</module>
     <module>template-admin</module>
+    <module>template-auth</module>
+    <module>template-zuul</module>
   </modules>
 
   <dependencies>

@@ -6,6 +6,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  * 注册中心 - Eureka
+ *
  * @author EricShen
  * @date 2019-06-03
  */

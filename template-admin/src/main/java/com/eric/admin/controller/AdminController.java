@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AdminController {
 
     @GetMapping("hello/{name}")
-    public String hello(@PathVariable String name){
-        return "Hello," + name;
+    public String hello(@PathVariable String name) {
+        return "Hello," + name + ", this is template admin!";
     }
 }
