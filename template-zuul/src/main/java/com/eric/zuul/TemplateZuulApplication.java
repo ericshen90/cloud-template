@@ -2,6 +2,8 @@ package com.eric.zuul;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 /**
  * 路由网关 Zuul
@@ -9,6 +11,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author EricShen
  * @date 2910-06-03
  */
+@EnableZuulProxy
+@EnableDiscoveryClient
 @SpringBootApplication
 public class TemplateZuulApplication {
 
