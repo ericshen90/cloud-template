@@ -8,24 +8,19 @@
     <artifactId>template</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-
-  <artifactId>template-zuul</artifactId>
+  <artifactId>template-config</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>template-zuul</name>
+  <name>template-config</name>
   <packaging>jar</packaging>
 
   <dependencies>
     <dependency>
       <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-config-server</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-config</artifactId>
     </dependency>
   </dependencies>
 

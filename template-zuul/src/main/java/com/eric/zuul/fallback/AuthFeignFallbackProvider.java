@@ -7,6 +7,8 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.cloud.netflix.zuul.filters.route.FallbackProvider;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -22,6 +24,8 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class AuthFeignFallbackProvider implements FallbackProvider {
+
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Override
     public String getRoute() {
@@ -66,6 +70,7 @@ public class AuthFeignFallbackProvider implements FallbackProvider {
                 Map<Object, Object> map = new HashMap<>(2);
                 map.put("status", 200);
                 map.put("message", "Connection failed, please check your network!");
+                logger.info("{}===>>>{}", "Getting into zuul", "fallbackResponse" + map);
                 return new ByteArrayInputStream(
                     mapper.writeValueAsString(map).getBytes(StandardCharsets.UTF_8));
             }
