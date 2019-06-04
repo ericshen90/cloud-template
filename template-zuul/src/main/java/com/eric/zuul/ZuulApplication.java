@@ -14,10 +14,10 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 @EnableZuulProxy
 @EnableDiscoveryClient
 @SpringBootApplication
-public class TemplateZuulApplication {
+public class ZuulApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TemplateZuulApplication.class, args);
+        SpringApplication.run(ZuulApplication.class, args);
     }
 
 }
