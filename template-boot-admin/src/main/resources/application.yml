@@ -1,15 +1,12 @@
 server:
-  port: 9002
+  port: 9004
 
 spring:
   application:
-    name: template-auth
+    name: template-boot-admin
   zipkin:
     base-url: http://localhost:9411
-  boot:
-    admin:
-      client:
-        url: http://localhost:9004
+
 eureka:
   client:
     service-url:
@@ -17,7 +14,11 @@ eureka:
       # 如果注册中心地址配置的域名，这里使用 http://域名/eureka/ 格式
       defaultZone: http://localhost:8080/eureka/
 
-feign:
-  hystrix:
-    # 开启Feign的Hystrix熔断器支持
-    enabled: true
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info

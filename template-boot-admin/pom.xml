@@ -9,9 +9,9 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>template-eureka</artifactId>
+  <artifactId>template-boot-admin</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>template-eureka</name>
+  <name>template-boot-admin</name>
   <packaging>jar</packaging>
 
   <dependencies>
@@ -19,15 +19,17 @@
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
     </dependency>
-
+    <dependency>
+      <groupId>org.jolokia</groupId>
+      <artifactId>jolokia-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>de.codecentric</groupId>
+      <artifactId>spring-boot-admin-starter-server</artifactId>
+    </dependency>
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-zipkin</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>de.codecentric</groupId>
-      <artifactId>spring-boot-admin-starter-client</artifactId>
     </dependency>
   </dependencies>
 
