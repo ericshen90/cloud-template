@@ -15,7 +15,7 @@ spring:
       profile: dev
   #      配置仓库的分支。如果是本地读取，可不配置
   #      label:
-  boot:
-    admin:
-      client:
-        url: http://localhost:9004
+#  boot:
+#    admin:
+#      client:
+#        url: http://localhost:9004
